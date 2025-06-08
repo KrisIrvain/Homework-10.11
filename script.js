@@ -25,12 +25,12 @@ let majority = ['светло-коричневый','зеленый','фиоле
 
 function display(arr) {
     // TODO: формируем новый элемент <li>, как указано в разметке и добавляем на страницу
-    let result;
-    result = '';
+
     console.log('зашли в консоль');
     let i = 0;
     let len = arr.length;
     let parent = document.querySelector('.fruits__list');
+        parent.innerHTML = '';
     while (i < len) {
         //создали элемент li
         let li = document.createElement('li');
@@ -66,9 +66,11 @@ function display(arr) {
 
 
 // первая отрисовка карточек
+
 document.getElementById('d_btn').addEventListener('click', function () {
     display(fruits);
 });
+
 
 
 /*** ПЕРЕМЕШИВАНИЕ ***/
@@ -217,4 +219,5 @@ addActionButton.addEventListener('click', () => {
         display(fruits);
     }
 });
+
 
